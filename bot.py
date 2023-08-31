@@ -2,9 +2,10 @@
 
 import asyncio
 
+import aiogram
 from aiogram import Bot, Dispatcher
 from config_data.config import Config, load_config
-
+from pprint import pprint
 
 # Функция конфигурирования и запуска бота
 async def main() -> None:
@@ -61,4 +62,3 @@ if __name__ == '__main__':
 
 # if __name__ == "__main__":
 #     dp.run_polling(bot)
-
