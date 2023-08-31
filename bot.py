@@ -1,8 +1,6 @@
 #from dotenv import load_dotenv
 
 import asyncio
-
-import aiogram
 from aiogram import Bot, Dispatcher
 from config_data.config import Config, load_config
 from pprint import pprint
