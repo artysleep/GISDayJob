@@ -27,7 +27,7 @@ class Config:
     db: DatabaseConfig
 
 
-def load_config(path: str | None) -> Config:
+def load_config(path: str | None = None) -> Config:
 
     # Создаем экземпляр класса Env
     env: Env = Env()
@@ -42,14 +42,3 @@ def load_config(path: str | None) -> Config:
                                     db_host=env('DB_HOST'),
                                     db_user=env('DB_USER'),
                                     db_password=env('DB_PASSWORD')))
-
-
-# Выводим значения полей экземпляра класса Config на печать, 
-# чтобы убедиться, что все данные, получаемые из переменных окружения, доступны
-# print('BOT_TOKEN:', config.tg_bot.token)
-# print('ADMIN_IDS:', config.tg_bot.admin_ids)
-# print()
-# print('DATABASE:', config.db.database)
-# print('DB_HOST:', config.db.db_host)
-# print('DB_USER:', config.db.db_user)
-# print('DB_PASSWORD:', config.db.db_password)
